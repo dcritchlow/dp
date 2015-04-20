@@ -1,0 +1,433 @@
+Timer running for 15 seconds
+#0 waiting for mutex
+#0 eating for 0 seconds
+#2 waiting for mutex
+#2 eating for 0 seconds
+#0 releasing chopsticks 0 and 1
+#0 thinking for 0 seconds
+#0 waiting for mutex
+#0 eating for 0 seconds
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 536756984 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 536756984 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 536756984 ns
+#0 releasing chopsticks 0 and 1
+#0 thinking for 0 seconds
+#0 waiting for mutex
+#0 eating for 2 seconds
+#2 releasing chopsticks 2 and 3
+#2 thinking for 0 seconds
+#2 waiting for mutex
+#2 eating for 0 seconds
+#2 releasing chopsticks 2 and 3
+#2 thinking for 0 seconds
+#2 waiting for mutex
+#2 eating for 2 seconds
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 374809508 ns
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 374809508 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 374809508 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 319101532 ns
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 319101532 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 319101532 ns
+#3 waiting for mutex
+#1 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 742458818 ns
+#4 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 742458818 ns
+#4 left chopstick not available
+#4 sleeping for 742458818 ns
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 726060518 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 726060518 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 726060518 ns
+#0 releasing chopsticks 0 and 1
+#0 thinking for 0 seconds
+#0 waiting for mutex
+#0 eating for 1 seconds
+#2 releasing chopsticks 2 and 3
+#2 thinking for 0 seconds
+#2 waiting for mutex
+#2 eating for 1 seconds
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 72413070 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 72413070 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 72413070 ns
+#1 waiting for mutex
+#1 right chopstick not available
+#1 left chopstick not available
+#1 sleeping for 975237329 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 sleeping for 975237329 ns
+#4 waiting for mutex
+#4 left chopstick not available
+#4 sleeping for 975237329 ns
+#0 releasing chopsticks 0 and 1
+#0 thinking for 0 seconds
+#0 waiting for mutex
+#0 eating for 0 seconds
+#0 releasing chopsticks 0 and 1
+#0 thinking for 1 seconds
+#2 releasing chopsticks 2 and 3
+#2 thinking for 0 seconds
+#2 waiting for mutex
+#2 eating for 0 seconds
+#2 releasing chopsticks 2 and 3
+#2 thinking for 1 seconds
+#1 waiting for mutex
+#1 eating for 0 seconds
+#3 waiting for mutex
+#3 eating for 0 seconds
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 897660556 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 228766064 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 228766064 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 851658165 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 851658165 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 177126852 ns
+#1 releasing chopsticks 1 and 2
+#1 thinking for 0 seconds
+#1 waiting for mutex
+#1 eating for 3 seconds
+#3 releasing chopsticks 3 and 4
+#3 thinking for 0 seconds
+#3 waiting for mutex
+#3 eating for 3 seconds
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 455099811 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 924537529 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 924537529 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 228766064 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 851658165 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 486143100 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 486143100 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 924537529 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 47925323 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 47925323 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 488928935 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 488928935 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 355878491 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 355878491 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 486143100 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 54262930 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 54262930 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 837742669 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 837742669 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 47925323 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 488928935 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 206457739 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 206457739 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 355878491 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 453599082 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 453599082 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 54262930 ns
+#1 releasing chopsticks 1 and 2
+#1 thinking for 0 seconds
+#1 waiting for mutex
+#1 eating for 1 seconds
+#3 releasing chopsticks 3 and 4
+#3 thinking for 0 seconds
+#3 waiting for mutex
+#3 eating for 1 seconds
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 837742669 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 269815252 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 269815252 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 296268270 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 296268270 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 158555658 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 158555658 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 206457739 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 15378238 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 15378238 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 122156597 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 122156597 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 453599082 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 582781539 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 582781539 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 269815252 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 188137310 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 188137310 ns
+#4 waiting for mutex
+#4 right chopstick not available
+#4 sleeping for 296268270 ns
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 845196802 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 left chopstick not available
+#2 sleeping for 845196802 ns
+#1 releasing chopsticks 1 and 2
+#1 thinking for 1 seconds
+#3 releasing chopsticks 3 and 4
+#3 thinking for 1 seconds
+#4 waiting for mutex
+#4 eating for 2 seconds
+#0 waiting for mutex
+#0 right chopstick not available
+#0 sleeping for 242082812 ns
+#2 waiting for mutex
+#2 eating for 0 seconds
+#0 waiting for mutex
+#0 right chopstick not available
+#0 sleeping for 384034943 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 left chopstick not available
+#3 sleeping for 486143100 ns
+#1 waiting for mutex
+#1 left chopstick not available
+#1 sleeping for 486143100 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 sleeping for 340608866 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 left chopstick not available
+#3 sleeping for 47925323 ns
+#1 waiting for mutex
+#1 left chopstick not available
+#1 sleeping for 47925323 ns
+#3 waiting for mutex
+#3 right chopstick not available
+#3 left chopstick not available
+#3 sleeping for 488928935 ns
+#1 waiting for mutex
+#1 left chopstick not available
+#1 sleeping for 488928935 ns
+#2 releasing chopsticks 2 and 3
+#2 thinking for 1 seconds
+#0 waiting for mutex
+#0 right chopstick not available
+#0 sleeping for 566110097 ns
+#3 waiting for mutex
+#3 left chopstick not available
+#3 sleeping for 355878491 ns
+#1 waiting for mutex
+#1 eating for 3 seconds
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 58665310 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 126716851 ns
+#3 waiting for mutex
+#3 left chopstick not available
+#3 sleeping for 54262930 ns
+#4 releasing chopsticks 4 and 0
+#4 thinking for 0 seconds
+#4 waiting for mutex
+#4 eating for 1 seconds
+#3 waiting for mutex
+#3 left chopstick not available
+#3 sleeping for 837742669 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 665120994 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 sleeping for 340608866 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 sleeping for 566110097 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 15146963 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 102343939 ns
+#0 waiting for mutex
+#0 right chopstick not available
+#0 left chopstick not available
+#0 sleeping for 936523636 ns
+#3 waiting for mutex
+#3 left chopstick not available
+#3 sleeping for 206457739 ns
+#3 waiting for mutex
+#3 left chopstick not available
+#3 sleeping for 453599082 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 sleeping for 58665310 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 sleeping for 126716851 ns
+#2 waiting for mutex
+#2 right chopstick not available
+#2 sleeping for 665120994 ns
+#4 releasing chopsticks 4 and 0
+#4 thinking for 1 seconds
+#3 waiting for mutex
+#3 eating for 0 seconds
+#0 waiting for mutex
+#0 left chopstick not available
+#0 sleeping for 748493253 ns
+Times UP!
+#3 releasing chopsticks 3 and 4
+#3 thinking for 0 seconds
+#1 releasing chopsticks 1 and 2
+#1 thinking for 0 seconds
+#0  MealCount: 5  MealTime: 3  WaitTime: 0  ThinkTime: 1
+#1  MealCount: 4  MealTime: 7  WaitTime: 5  ThinkTime: 1
+#2  MealCount: 6  MealTime: 3  WaitTime: 8  ThinkTime: 2
+#3  MealCount: 4  MealTime: 4  WaitTime: 7  ThinkTime: 1
+#4  MealCount: 2  MealTime: 3  WaitTime: 11  ThinkTime: 1
+Averages:  MealCount: 4.2  MealTime: 4.0  WaitTime: 6.2  ThinkTime: 1.2
