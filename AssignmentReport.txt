@@ -1,0 +1,53 @@
+-- 5 philosophers for 60 seconds --
+#0 MealCount: 23 MealTime: 14 WaitTime: 15 ThinkTime: 33
+#1 MealCount: 22 MealTime: 10 WaitTime: 9 ThinkTime: 41
+#2 MealCount: 23 MealTime: 12 WaitTime: 8 ThinkTime: 40
+#3 MealCount: 26 MealTime: 14 WaitTime: 8 ThinkTime: 39
+#4 MealCount: 18 MealTime: 7 WaitTime: 12 ThinkTime: 41
+Averages: MealCount: 22.4 MealTime: 11.4 WaitTime: 10.4 ThinkTime: 38.8
+
+#0 MealCount: 20 MealTime: 10 WaitTime: 15 ThinkTime: 36
+#1 MealCount: 23 MealTime: 12 WaitTime: 15 ThinkTime: 34
+#2 MealCount: 24 MealTime: 10 WaitTime: 14 ThinkTime: 36
+#3 MealCount: 21 MealTime: 15 WaitTime: 10 ThinkTime: 35
+#4 MealCount: 26 MealTime: 10 WaitTime: 14 ThinkTime: 36
+Averages: MealCount: 22.8 MealTime: 11.4 WaitTime: 13.6 ThinkTime: 35.4
+
+#0 MealCount: 20 MealTime: 11 WaitTime: 13 ThinkTime: 38
+#1 MealCount: 27 MealTime: 12 WaitTime: 13 ThinkTime: 35
+#2 MealCount: 26 MealTime: 12 WaitTime: 14 ThinkTime: 34
+#3 MealCount: 23 MealTime: 13 WaitTime: 13 ThinkTime: 34
+#4 MealCount: 21 MealTime: 14 WaitTime: 10 ThinkTime: 36
+Averages: MealCount: 23.4 MealTime: 12.4 WaitTime: 12.6 ThinkTime: 35.4
+
+#0 MealCount: 12 MealTime: 6 WaitTime: 35 ThinkTime: 19
+#1 MealCount: 15 MealTime: 7 WaitTime: 35 ThinkTime: 18
+#2 MealCount: 15 MealTime: 7 WaitTime: 32 ThinkTime: 21
+#3 MealCount: 11 MealTime: 7 WaitTime: 31 ThinkTime: 22
+#4 MealCount: 10 MealTime: 4 WaitTime: 33 ThinkTime: 23
+Averages: MealCount: 12.6 MealTime: 6.2 WaitTime: 33.2 ThinkTime: 20.6
+
+-- 4 philosophers for 60 seconds --
+#0 MealCount: 4 MealTime: 4 WaitTime: 47 ThinkTime: 9
+#1 MealCount: 4 MealTime: 2 WaitTime: 46 ThinkTime: 12
+#2 MealCount: 4 MealTime: 2 WaitTime: 48 ThinkTime: 10
+#3 MealCount: 6 MealTime: 1 WaitTime: 51 ThinkTime: 8
+Averages: MealCount: 4.5 MealTime: 2.25 WaitTime: 48 ThinkTime: 9.75
+
+#0 MealCount: 2 MealTime: 1 WaitTime: 55 ThinkTime: 4
+#1 MealCount: 2 MealTime: 2 WaitTime: 55 ThinkTime: 3
+#2 MealCount: 2 MealTime: 2 WaitTime: 54 ThinkTime: 4
+#3 MealCount: 3 MealTime: 0 WaitTime: 56 ThinkTime: 4
+Averages: MealCount: 2.25 MealTime: 1.25 WaitTime: 55 ThinkTime: 3.75
+
+#0 MealCount: 19 MealTime: 9 WaitTime: 12 ThinkTime: 39
+#1 MealCount: 22 MealTime: 15 WaitTime: 10 ThinkTime: 34
+#2 MealCount: 23 MealTime: 12 WaitTime: 12 ThinkTime: 36
+#3 MealCount: 23 MealTime: 11 WaitTime: 11 ThinkTime: 38
+Averages: MealCount: 21.75 MealTime: 11.75 WaitTime: 11.25 ThinkTime: 36.75
+
+#0 MealCount: 12 MealTime: 6 WaitTime: 32 ThinkTime: 22
+#1 MealCount: 15 MealTime: 7 WaitTime: 31 ThinkTime: 22
+#2 MealCount: 16 MealTime: 8 WaitTime: 30 ThinkTime: 22
+#3 MealCount: 16 MealTime: 5 WaitTime: 32 ThinkTime: 23
+Averages: MealCount: 14.75 MealTime: 6.5 WaitTime: 31.25 ThinkTime: 22.25
