@@ -9,6 +9,10 @@ typedef struct {
     int *waittime;        /* Total time that a philosopher is blocked */
     int *blockstarting;    /* If a philsopher is currently blocked, the time that he
                             started blocking */
+    int *eatingtime;
+    int *mealcount;
+    int *thinktime;
+    int *mealtime;
     int phil_count;
     pthread_mutex_t *waitmon;   /* monitor for waittime */
 } Phil_struct;

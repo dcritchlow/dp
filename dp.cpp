@@ -23,8 +23,24 @@ void pickup(Phil_struct *ps)
 	pp = (Sticks *) ps->v;
 	phil_count = pp->phil_count;
 
-	pthread_mutex_lock(pp->lock[ps->id]);       /* lock up left stick */
-	pthread_mutex_lock(pp->lock[(ps->id+1)%phil_count]); /* lock up right stick */
+	if(!pthread_mutex_lock(pp->lock[ps->id])) {
+		printf("#%d left chopstick not available\n", ps->id);
+//		int milisec = 100; // length of time to sleep, in miliseconds
+		struct timespec req;
+		req.tv_sec = 0;
+		req.tv_nsec = 100000000ULL * rand() / RAND_MAX;
+		nanosleep(&req, (struct timespec *)NULL);
+		printf("#%d sleeping for %d ns\n", ps->id, req.tv_nsec);
+	}
+	if(!pthread_mutex_lock(pp->lock[(ps->id+1)%phil_count])) {
+		printf("#%d right chopstick not available\n", ps->id);
+//		int milisec = 100; // length of time to sleep, in miliseconds
+		struct timespec req;
+		req.tv_sec = 0;
+		req.tv_nsec = 100000000ULL * rand() / RAND_MAX;
+		nanosleep(&req, (struct timespec *)NULL);
+		printf("#%d sleeping for %d ns\n", ps->id, req.tv_nsec);
+	}
 }
 
 void putdown(Phil_struct *ps)
@@ -73,9 +89,10 @@ void *philosopher(void *v)
 
 		/* First the philosopher thinks for a random number of seconds */
 
-		st = (random()%ps->ms) + 1;
-		printf("#%d sleeping for %d second%s\n",
+		st = (random()%ps->ms);
+		printf("#%d thinking for %d second%s\n",
 			   ps->id, st, (st == 1) ? "" : "s");
+		ps->thinktime[ps->id]+= st;
 		fflush(stdout);
 		sleep(st);
 
@@ -100,9 +117,11 @@ void *philosopher(void *v)
 		/* When pickup returns, the philosopher can eat for a random number of
            seconds */
 
-		st = (random()%ps->ms) + 1;
+		st = (random()%2);
 		printf("#%d eating for %d second%s\n",
 			   ps->id, st, (st == 1) ? "" : "s");
+		ps->mealcount[ps->id] += 1;
+		ps->mealtime[ps->id] += st;
 		fflush(stdout);
 		sleep(st);
 
@@ -111,6 +130,7 @@ void *philosopher(void *v)
 
 		printf("#%d releasing chopsticks\n",
 			   ps->id);
+
 		fflush(stdout);
 		putdown(ps);
 	}
@@ -124,13 +144,20 @@ int main(int argc, char **argv) {
 	int t0, ttmp, ttmp2;
 	pthread_mutex_t *waitmon;
 	int *waittime;
+	int *eatingtime;
+	int *mealcount;
+	int *thinktime;
+	int *mealtime;
 	int *blockstarting;
-	char s[500];
 	int phil_count;
-	char *curr;
-	int total;
+	int waiting;
+	int thinks;
 	int runseconds;
 	int ran = 0;
+	double averagemeals =0;
+	double averagemealtime =0;
+	double averagewaittime =0;
+	double averagethinktime =0;
 
 	if (argc != 3) {
 		fprintf(stderr, "usage: dp philosopher_count maxsleepsec\n");
@@ -149,6 +176,14 @@ int main(int argc, char **argv) {
 	t0 = time(0);
 	waittime = (int *) malloc(sizeof(int)*phil_count);
 	if (waittime == NULL) { perror("malloc waittime"); exit(1); }
+	eatingtime = (int *) malloc(sizeof(int)*phil_count);
+	if (eatingtime == NULL) { perror("malloc eatingtime"); exit(1); }
+	mealcount = (int *) malloc(sizeof(int)*phil_count);
+	if (mealcount == NULL) { perror("malloc mealcount"); exit(1); }
+	thinktime = (int *) malloc(sizeof(int)*phil_count);
+	if (thinktime == NULL) { perror("malloc thinktime"); exit(1); }
+	mealtime = (int *) malloc(sizeof(int)*phil_count);
+	if (mealtime == NULL) { perror("malloc mealtime"); exit(1); }
 	blockstarting = (int *) malloc(sizeof(int)*phil_count);
 	if (blockstarting == NULL) { perror("malloc blockstarting"); exit(1); }
 
@@ -156,6 +191,9 @@ int main(int argc, char **argv) {
 	pthread_mutex_init(waitmon, NULL);
 	for (i = 0; i < phil_count; i++) {
 		waittime[i] = 0;
+		eatingtime[i] = 0;
+		mealcount[i] = 0;
+		thinktime[i] = 0;
 		blockstarting[i] = -1;
 	}
 
@@ -165,6 +203,10 @@ int main(int argc, char **argv) {
 		ps[i].v = v;
 		ps[i].ms = 4;
 		ps[i].waittime = waittime;
+		ps[i].eatingtime = eatingtime;
+		ps[i].mealcount = mealcount;
+		ps[i].mealtime = mealtime;
+		ps[i].thinktime = thinktime;
 		ps[i].blockstarting = blockstarting;
 		ps[i].waitmon = waitmon;
 		ps[i].phil_count = phil_count;
@@ -176,34 +218,49 @@ int main(int argc, char **argv) {
 			printf("Timer running for %d seconds\n", runseconds);
 		pthread_mutex_lock(waitmon);
 		ttmp = time(0);
-		curr = s;
-		total = 0;
+		waiting = 0;
+		thinks = 0;
 		for(i=0; i < phil_count; i++) {
-			total += waittime[i];
-			if (blockstarting[i] != -1) total += (ttmp - blockstarting[i]);
+			waiting += waittime[i];
+			thinks += thinktime[i];
+			if (blockstarting[i] != -1){
+				waiting += (ttmp - blockstarting[i]);
+				waittime[i] += (ttmp - blockstarting[i]);
+			}
 		}
-//		if(ran != 0)
-			sprintf(curr,"Total waittime: %5d : ", total);
-
-//		if(ran !=0)
-			curr = s + strlen(s);
 
 		for(i=0; i < phil_count; i++) {
 			ttmp2 = waittime[i];
 			if (blockstarting[i] != -1) ttmp2 += (ttmp - blockstarting[i]);
-//			if (ran > phil_count)
-			sprintf(curr, "%5d ", (int)ttmp2);
-			curr = s + strlen(s);
 			ran += 1;
 
 		}
 
 		pthread_mutex_unlock(waitmon);
-		if(ran !=0)
-			printf("%s\n", s);
 		fflush(stdout);
 		if(ran > phil_count) {
 			cout << "Time's up" << endl;
+			for(i=0; i<phil_count; i++){
+				cout << "#" << i << " MealCount: " << mealcount[i]
+				<< " MealTime: " << mealtime[i]
+				<< " WaitTime: " << waittime[i]
+				<< " ThinkTime: " << thinktime[i]
+				<< endl;
+				averagemeals += mealcount[i];
+				averagemealtime += mealtime[i];
+				averagewaittime += waittime[i];
+				averagethinktime += thinktime[i];
+			}
+			cout << "Averages:"
+			<< " MealCount: "
+			<< (double)averagemeals / phil_count
+			<< " MealTime: "
+			<< (double)averagemealtime / phil_count
+			<< " WaitTime: "
+			<< (double)averagewaittime / phil_count
+			<< " ThinkTime: "
+			<< (double)averagethinktime / phil_count
+			<< endl;
 			exit(0);
 		}
 		sleep(runseconds);
